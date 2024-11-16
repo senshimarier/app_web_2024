@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% comment %} Aqui va el block del titulo {% endcomment %}
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <h1>Estoy en la pagina Inicio</h1>
+    <h2>Bienvenido a mi pagina con django</h2>
+    <nav>
+        <ul>
+            <li> <a href="{% url "inicio" %}">Inicio</a></li>
+            <li> <a href="{% url "acercade" %}">Sobre nosotros</a></li>
+            <li> <a href="{% url "mision" %}">Mision</a></li> 
+            <li> <a href="{% url "vision" %}">Vision</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% comment %} Aqui se maqueta el contenido del block {% endcomment %}
+    {% endblock content %}
+</body>
+</html>
